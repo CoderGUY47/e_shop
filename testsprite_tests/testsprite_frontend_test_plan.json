@@ -1,0 +1,437 @@
+[
+  {
+    "id": "TC001",
+    "title": "Verify product listing displays all products on Home Screen",
+    "description": "Check that all products are displayed correctly in a grid on the Home Screen upon app launch.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch the app"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Home Screen displays a grid of all available products with images, names, and prices"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure products are loaded without delay or error messages"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Product filtering by category",
+    "description": "Verify products are correctly filtered when a category chip is selected on the Home Screen.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch the app and navigate to Home Screen"
+      },
+      {
+        "type": "action",
+        "description": "Select a category chip from the category filter bar"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that only products belonging to the selected category are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify products from other categories are not shown"
+      },
+      {
+        "type": "action",
+        "description": "Deselect the category chip"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product grid returns to show all products"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Product filtering by search input",
+    "description": "Ensure the search bar filters products based on user input in real time.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch the app and navigate to Home Screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter a product name or partial name into the search bar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify products displayed include only those whose names match the search term"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the product grid updates dynamically with each keystroke"
+      },
+      {
+        "type": "action",
+        "description": "Clear the search input"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify full product list is restored"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Navigate to Product Detail Screen from Home Screen",
+    "description": "Verify user can tap on a product card to navigate to its detail screen showing full details.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On Home Screen, tap on a product card"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify navigation to Product Detail Screen occurs"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that product image, name, price, description, and other details are displayed correctly"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Add product to cart with default quantity",
+    "description": "Verify that tapping add to cart on Product Detail Screen adds one unit to the shopping cart.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On Product Detail Screen, tap 'Add to Cart' button without changing quantity"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart provider adds the selected product with quantity 1"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to Cart Screen via bottom navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the added product is listed with quantity 1 and correct price"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Update product quantity in cart and verify total price update",
+    "description": "Verify users can increase or decrease the quantity of items in the cart and that total price updates correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Cart Screen with existing cart items"
+      },
+      {
+        "type": "action",
+        "description": "Increment quantity of a cart item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify quantity increments by 1 and the total price reflects the change"
+      },
+      {
+        "type": "action",
+        "description": "Decrement quantity of the same cart item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify quantity decrements by 1 and the total price updates accordingly"
+      },
+      {
+        "type": "action",
+        "description": "Decrement quantity until product quantity reaches zero"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify product is removed from the cart and total updates"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Remove product from cart",
+    "description": "Verify removing a product from the cart updates the cart and total price correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Cart Screen with multiple items in cart"
+      },
+      {
+        "type": "action",
+        "description": "Tap remove/delete button on a product in the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify product is removed from cart list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify total price updates to exclude removed product"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Navigate between Home, Cart, and Menu using bottom navigation",
+    "description": "Verify smooth and correct navigation among the three main screens using the bottom navigation bar.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch app on Home Screen"
+      },
+      {
+        "type": "action",
+        "description": "Tap the Cart tab on bottom navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Cart Screen is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Tap Menu tab on bottom navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Menu Screen is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Tap Home tab on bottom navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Home Screen is displayed again"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Checkout process with valid delivery and payment simulation",
+    "description": "Verify user can complete checkout by entering delivery information and making a simulated payment.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Add product(s) to cart and navigate to Cart Screen"
+      },
+      {
+        "type": "action",
+        "description": "Tap 'Proceed to Checkout' button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify navigation to Checkout Screen occurs"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid delivery details (name, address, phone number)"
+      },
+      {
+        "type": "action",
+        "description": "Select simulated payment method and submit"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order is processed and confirmation screen/message is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Verify user can continue shopping or exit after confirmation"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Checkout with missing required delivery information",
+    "description": "Verify app prevents checkout submission if required delivery fields are missing or invalid.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Checkout Screen with items in cart"
+      },
+      {
+        "type": "action",
+        "description": "Leave one or more required delivery fields empty or invalid"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to submit checkout form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation error messages are displayed for missing/invalid fields"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure payment simulation does not proceed"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Cart state persistence across app restarts",
+    "description": "Verify cart contents persist correctly when the app is closed and reopened using local storage.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Add products to cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart contents and total price are correct"
+      },
+      {
+        "type": "action",
+        "description": "Close the app completely"
+      },
+      {
+        "type": "action",
+        "description": "Relaunch the app"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart contents and total remain as before app was closed"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Theme consistency across all screens",
+    "description": "Verify that the custom app theme is applied consistently on Home, Cart, Product Detail, Checkout, and Menu screens.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to each main screen: Home, Product Detail, Cart, Checkout, and Menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify color scheme, fonts, button styles, and other theme elements are consistent with the custom theme"
+      },
+      {
+        "type": "assertion",
+        "description": "Check UI elements conform to Material Design guidelines consistently"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "State synchronization between product listing and cart",
+    "description": "Verify that adding products to cart updates the cart provider and that the UI reflects the current cart state immediately.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On Product Detail Screen, add a product to cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart provider state updates immediately"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to Cart Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart UI shows the newly added product with correct quantity"
+      },
+      {
+        "type": "action",
+        "description": "Remove product from cart and return to Home Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify product count badges, cart indicators, and provider state reflect removal"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Search input with no matching results",
+    "description": "Verify that the app displays an appropriate message or empty state when no products match search input.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "On Home Screen, enter a search term that matches zero products"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the product grid is empty"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that a 'No products found' or similar message is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Add multiple quantities of a product from Product Detail Screen",
+    "description": "Verify that users can set quantity > 1 before adding a product to cart, and that the cart reflects the correct quantity and price.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to a Product Detail Screen"
+      },
+      {
+        "type": "action",
+        "description": "Increase the quantity selector to a number greater than 1"
+      },
+      {
+        "type": "action",
+        "description": "Tap 'Add to Cart' button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cart contains the correct product with selected quantity"
+      },
+      {
+        "type": "action",
+        "description": "Go to Cart Screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify total price is quantity * product price"
+      }
+    ]
+  }
+]

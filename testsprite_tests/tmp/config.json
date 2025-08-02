@@ -1,0 +1,17 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "loginUser": "admin",
+  "loginPassword": "admin",
+  "executionArgs": {
+    "projectName": "e-shop",
+    "projectPath": "D:\\flutter apps\\e-shop\\e_shop",
+    "testIds": [],
+    "additionalInstruction": "",
+    "envs": {
+      "API_KEY": "sk-user-DP41L9gB3iL9AQKLfNM2ASJ3SDTuEBuKgeSVBvIphwR8aq8ABgF776g1BCDDc3-oH5aASsSo7vIbyNr5245EdgeAZhEdLfncBRrFVNpsUrYgVhWEKADXy6pFH14gumWJxxw"
+    }
+  }
+}

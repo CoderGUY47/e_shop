@@ -1,0 +1,68 @@
+{
+  "tech_stack": [
+    "Dart",
+    "Flutter",
+    "Provider (State Management)",
+    "SharedPreferences (Local Storage)",
+    "Material Design"
+  ],
+  "features": [
+    {
+      "name": "Product Management",
+      "description": "Product listing, filtering, and detail views with category-based organization",
+      "files": [
+        "lib/models/product.dart",
+        "lib/providers/product_provider.dart",
+        "lib/widgets/product_card.dart",
+        "lib/screens/product_detail_screen.dart"
+      ]
+    },
+    {
+      "name": "Shopping Cart",
+      "description": "Cart functionality with add/remove items, quantity management, and total calculation",
+      "files": [
+        "lib/models/cart_item.dart",
+        "lib/providers/cart_provider.dart",
+        "lib/screens/cart_screen.dart"
+      ]
+    },
+    {
+      "name": "Checkout System",
+      "description": "Order processing with delivery information and payment simulation",
+      "files": [
+        "lib/screens/checkout_screen.dart"
+      ]
+    },
+    {
+      "name": "Home Screen",
+      "description": "Main shopping interface with product grid, search, and category filtering",
+      "files": [
+        "lib/screens/home_screen.dart",
+        "lib/widgets/search_bar.dart",
+        "lib/widgets/category_chip.dart"
+      ]
+    },
+    {
+      "name": "Navigation System",
+      "description": "Bottom navigation with home, cart, and menu tabs",
+      "files": [
+        "lib/main.dart"
+      ]
+    },
+    {
+      "name": "Theme Management",
+      "description": "Custom app theme with consistent colors and styling",
+      "files": [
+        "lib/utils/theme.dart"
+      ]
+    },
+    {
+      "name": "State Management",
+      "description": "Provider-based state management for cart and product data",
+      "files": [
+        "lib/providers/cart_provider.dart",
+        "lib/providers/product_provider.dart"
+      ]
+    }
+  ]
+} 
